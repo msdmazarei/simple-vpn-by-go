@@ -42,13 +42,22 @@ this project contains below files:
 ------------
 
  1. Performance
+ 
 	 1.1 it is better to use [SO_REUSEPORT]([https://lwn.net/Articles/542629/]) option for UDP sockets(becuase it allows to multiple thread/process to listen on same port) .
+	 
 	 1.2 it is better to run multiple thread(go routine) to increase capture and transfer performance
-	 1,3 general linux kernel option may helps performance of ip layer/ or directly use BSD!!
+	 
+	 1.3 general linux kernel option may helps performance of ip layer/ or 
+	 directly use BSD!!
+ 
  2. code
+
 	 2.1 read configs from file and environment
+
 	 2.2 better Golang coding style
 
 [compile]
  ---------
- to compile the code simply : /usr/bin/go build main.go encryption.go config.go
+ to compile the code simply : 
+ 
+ /usr/bin/go build main.go encryption.go config.go
