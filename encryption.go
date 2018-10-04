@@ -18,7 +18,7 @@ func simple_xor(bytes []byte,key []byte) []byte{
 // this method decript packet by specified encription
 // if there is no encription method we return input bytes array
 func DecryptPacket(bytes []byte,config *vpnConfig) ([]byte,error) {
-	if(config.encryptionMethod =="xor"){
+	if config.encryptionMethod =="xor" {
 		return simple_xor(bytes,config.xorKey),nil
 	}
 	return bytes,nil
@@ -26,7 +26,7 @@ func DecryptPacket(bytes []byte,config *vpnConfig) ([]byte,error) {
 
 //EncryptPacket
 func EncryptPacket(bytes []byte,config *vpnConfig) ([]byte,error){
-	if(config.encryptionMethod =="xor"){
+	if config.encryptionMethod =="xor" {
 		return simple_xor(bytes,config.xorKey),nil
 	}
 	return  bytes,nil

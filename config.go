@@ -38,10 +38,10 @@ func ParseConfig() *vpnConfig {
 	}
 
 	config.remoteIp = remoteIp
-	config.remotePort=((uint16)(remotePort))
+	config.remotePort= (uint16)(remotePort)
 
 	config.localIp = localIp
-	config.localPort=((uint16)(localPort))
+	config.localPort= (uint16)(localPort)
 	log.Printf("Ip to Connect: %s Port:%s",RemoteIp,RemotePort)
 	config.xorKey=[]byte{1,2,3,4,5,6,7,8,9,10,11,12}
 	config.encryptionMethod = "xor"
