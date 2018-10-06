@@ -90,6 +90,8 @@ type vpnConfig struct {
 
 	// the byte array for xor encrytion
 	xorKey []byte
+	// the byate array for DES encryption
+	desKey []byte
 }
 
 const (

@@ -20,6 +20,8 @@ func simple_xor(bytes []byte,key []byte) []byte{
 func DecryptPacket(bytes []byte,config *vpnConfig) ([]byte,error) {
 	if config.encryptionMethod =="xor" {
 		return simple_xor(bytes,config.xorKey),nil
+	} else if (config.encryptionMethod=="des"){
+		return DesDecrypt(bytes, config.desKey)
 	}
 	return bytes,nil
 }
@@ -28,6 +30,8 @@ func DecryptPacket(bytes []byte,config *vpnConfig) ([]byte,error) {
 func EncryptPacket(bytes []byte,config *vpnConfig) ([]byte,error){
 	if config.encryptionMethod =="xor" {
 		return simple_xor(bytes,config.xorKey),nil
+	} else if config.encryptionMethod=="des"{
+		return DesEncrypt(bytes,config.desKey)
 	}
 	return  bytes,nil
 
