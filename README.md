@@ -60,4 +60,4 @@ this project contains below files:
  ---------
  to compile the code simply : 
  
- /usr/bin/go build main.go encryption.go config.go
+ /usr/bin/go *go
